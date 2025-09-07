@@ -1,0 +1,155 @@
+/* Minecraft-specific styles */
+
+.minecraft-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+}
+
+.minecraft-hero {
+  background: radial-gradient(ellipse at center, rgba(34, 139, 34, 0.1) 0%, transparent 70%);
+  position: relative;
+  overflow: hidden;
+}
+
+.minecraft-card {
+  background: rgba(16, 16, 16, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(34, 139, 34, 0.3);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.minecraft-card:hover {
+  border-color: rgba(34, 139, 34, 0.6);
+  box-shadow: 0 8px 32px rgba(34, 139, 34, 0.2);
+  transform: translateY(-4px);
+}
+
+.minecraft-button {
+  background: linear-gradient(135deg, #228b22 0%, #32cd32 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.minecraft-button:hover {
+  background: linear-gradient(135deg, #32cd32 0%, #228b22 100%);
+  box-shadow: 0 4px 16px rgba(34, 139, 34, 0.4);
+  transform: translateY(-2px);
+}
+
+.minecraft-text-glow {
+  text-shadow: 0 0 10px rgba(34, 139, 34, 0.5);
+}
+
+.minecraft-grid-bg {
+  background-image: 
+    linear-gradient(rgba(34, 139, 34, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 139, 34, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.minecraft-floating-particles {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #32cd32;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
+}
+
+.minecraft-plan-card {
+  background: rgba(16, 16, 16, 0.9);
+  border: 2px solid rgba(34, 139, 34, 0.3);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.minecraft-plan-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(34, 139, 34, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.minecraft-plan-card:hover::before {
+  left: 100%;
+}
+
+.minecraft-plan-card:hover {
+  border-color: rgba(34, 139, 34, 0.8);
+  box-shadow: 0 12px 40px rgba(34, 139, 34, 0.3);
+  transform: translateY(-8px);
+}
+
+.minecraft-feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.minecraft-feature-list li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  color: #e0e0e0;
+}
+
+.minecraft-feature-list li::before {
+  content: '✓';
+  color: #32cd32;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.minecraft-glow {
+  box-shadow: 0 0 20px rgba(34, 139, 34, 0.4);
+}
+
+.minecraft-pulse {
+  animation: minecraft-pulse 2s ease-in-out infinite;
+}
+
+@keyframes minecraft-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.minecraft-gradient-text {
+  background: linear-gradient(135deg, #32cd32, #228b22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.minecraft-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.minecraft-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(34, 139, 34, 0.02);
+  pointer-events: none;
+}
